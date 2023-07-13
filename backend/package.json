@@ -1,0 +1,38 @@
+{
+   "name": "server",
+   "version": "1.0.0",
+   "description": "",
+   "main": "src/index.ts",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "tsc",
+      "start": "nodemon --exec ts-node src/index.ts",
+      "typeorm": "typeorm-ts-node-commonjs",
+      "seed:all": "yarn seed:channel && yarn seed:category && yarn seed:subscriber && yarn seed:log",
+      "seed:channel": "ts-node src/seeder/channel.seeder.ts",
+      "seed:category": "ts-node src/seeder/category.seeder.ts",
+      "seed:subscriber": "ts-node src/seeder/subscriber.seeder.ts",
+      "seed:log": "ts-node src/seeder/log.seeder.ts"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "body-parser": "^1.20.2",
+      "cors": "^2.8.5",
+      "date-and-time": "^3.0.2",
+      "dotenv": "^16.3.1",
+      "express": "^4.18.2",
+      "reflect-metadata": "^0.1.13",
+      "sqlite3": "^5.1.6",
+      "typeorm": "0.3.17"
+   },
+   "devDependencies": {
+      "@types/cors": "^2.8.13",
+      "@types/express": "^4.17.17",
+      "@types/node": "^16.11.10",
+      "nodemon": "^2.0.22",
+      "ts-node": "10.7.0",
+      "typescript": "4.5.2"
+   }
+}
